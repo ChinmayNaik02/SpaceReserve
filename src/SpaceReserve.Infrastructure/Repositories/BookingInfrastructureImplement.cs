@@ -28,5 +28,9 @@ public class BookingInfrastructureImplement : IBookingInfrastructure
         FirstOrDefaultAsync(b => b.BookingID == id);
         return result;
     }
+    public async Task<IEnumerable<Booking>> GetAllBookingsAsync()
+        {
+            return await _context.Bookings.ToListAsync();
+        }
 
 }

@@ -17,6 +17,12 @@ public class BookingController : ControllerBase
         _service=service;
         _logger=logger;
     }
+     [HttpGet]
+        public async Task<IActionResult> GetBookings()
+        {
+            var bookings = await _service.GetAllBookingsAsync();
+            return Ok(bookings);
+        }
     [HttpGet("{id}")]
     public async Task<ActionResult> GetBookingByIdAsync(int id)
     {
