@@ -11,7 +11,7 @@ public static class Startup
     [Obsolete]
     public static void AddStartupServices(this WebApplicationBuilder builder)
     {
-        builder.Services.AddAutoMapper(typeof(AutoMapperConfigurations));
+        builder.Services.AddAutoMapper(typeof(AutoMapperConfiguration));
         builder.Services.AddControllers();
                         // .AddFluentValidation(fv => fv.RegisterValidatorsFromAssembly(Assembly.Load("AppointmentBookingSystem.AppService")));
         builder.Services.AddEndpointsApiExplorer();

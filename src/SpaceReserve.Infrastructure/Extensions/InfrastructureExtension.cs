@@ -16,5 +16,6 @@ public static class InfrastructureExtension
             options => options.UseSqlServer(configuration.GetConnectionString("DatabaseString"))
         );
         services.AddScoped<IUsersRepository, UserRepository>();
+        services.AddScoped<IWorkspaceRepository, WorkspaceRepository>();
     }
 }
