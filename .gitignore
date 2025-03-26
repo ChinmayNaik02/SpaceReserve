@@ -25,6 +25,7 @@ nupkg/
 *.user
 *.userosscache
 *.sln.docstates
+*.json
 
 # Build results
 [Dd]ebug/
@@ -41,3 +42,4 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+[Mm]igration/
