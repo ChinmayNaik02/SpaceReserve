@@ -12,5 +12,8 @@ public class AutoMapperConfiguration : Profile
         CreateMap<Workspace, WorkspaceDto>().ReverseMap();
         CreateMap<Booking,BookingDto>().ReverseMap();
         CreateMap<WorkspaceAmenity,WorkspaceAmenityDto>() .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Amenity.AmenityName)).ReverseMap();
+        CreateMap<Booking, GetBookingDto>().ReverseMap();
+        
+
     }
 }
