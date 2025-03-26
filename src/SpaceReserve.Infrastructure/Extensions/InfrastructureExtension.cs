@@ -17,5 +17,6 @@ public static class InfrastructureExtension
         );
         services.AddScoped<IUsersRepository, UserRepository>();
         services.AddScoped<IWorkspaceRepository, WorkspaceRepository>();
+        services.AddScoped<IBookingInfrastructure,BookingInfrastructureImplement>();
     }
 }
