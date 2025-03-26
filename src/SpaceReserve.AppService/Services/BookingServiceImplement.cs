@@ -33,5 +33,12 @@ public class BookingServiceImplement : IBookingService
         var result= _mapper.Map<BookingDto>(booking);
         return result;
     }
+       public async Task<IEnumerable<BookingDto>> GetAllBookingsAsync()
+        {
+            var bookings=await _repository.GetAllBookingsAsync();
+            var result= _mapper.Map<IEnumerable<BookingDto>>(bookings);
+            return result;
+
+        }
 
 }
